@@ -6,6 +6,7 @@ var { OpenAIApi, Configuration } = require('openai');
 require('dotenv').config();
 app.use(cors());
 app.use(express.static(__dirname + '/public'));
+const PORT = process.env.PORT || 3030;
 
 let config = new Configuration({
   apiKey: process.env.API_CHAT
@@ -36,6 +37,6 @@ app.get('/ai', function(req,res){
     });
 
 
- app.listen(3000, function () {
-   console.log('http://localhost:3000/ app listening on port 3000!');
+ app.listen(PORT, function () {
+   console.log(`server started on port ${PORT}`);
  });
