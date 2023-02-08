@@ -15,7 +15,7 @@ let openai = new OpenAIApi(config);
 
 
 app.get('/', function(req,res){
-    res.sendFile(__dirname + '/index.html')
+    res.send("Welcome to the Server")
 })
 
 app.get('/ai', function(req,res){
