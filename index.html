@@ -53,7 +53,7 @@
       document.querySelector('.chat-content').insertAdjacentHTML('beforeend', template);
       document.querySelector('#input').value = '';
 
-      let q = 'http://localhost:3000/ai?q=' + input;
+      let q = 'https://aichatbot-a0jv.onrender.com/ai?q=' + input;
       axios.get(q).then(r => {
       var result = r.data;
 
